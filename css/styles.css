@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.article {
+  width: min(730px, 87.2%);
+  border-radius: 0.5rem;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 38px 38px -10px hsla(217, 19%, 35%, 0.1);
+  display: flex;
+  position: relative;
+}
+.article .sideimg {
+  width: 285px;
+  height: auto;
+  border-radius: 0.5rem 0 0 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+.article .content {
+  padding: 1.975rem 2.5rem;
+}
+.article .content h1 {
+  margin-bottom: 0.775rem;
+  font-size: clamp(1.02rem, 2.5vw, 1.28rem);
+  color: hsl(217, 19%, 35%);
+}
+.article .content p {
+  font-size: 0.83rem;
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.article .content .article-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.article .content .article-footer .author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.article .content .article-footer .author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.article .content .article-footer .author .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.article .content .article-footer .author .info b {
+  font-size: 0.827rem;
+  color: hsl(217, 19%, 35%);
+}
+.article .content .article-footer .author .info time {
+  font-size: 0.825rem;
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+}
+.article .content .article-footer .share-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: hsl(210, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+.article .content .article-footer .share-btn.active {
+  background: hsl(214, 17%, 51%);
+}
+.article .content .article-footer .share-btn svg path.active {
+  fill: hsl(0, 0%, 100%);
+}
+.article .content .article-footer .share-content {
+  width: 248px;
+  height: 55px;
+  border-radius: 0.5rem;
+  background: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.15rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s ease;
+  position: absolute;
+  bottom: 7rem;
+  right: -4.25rem;
+}
+.article .content .article-footer .share-content.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 6rem;
+}
+.article .content .article-footer .share-content::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 19px solid transparent;
+  border-right: 19px solid transparent;
+  border-top: 19px solid hsl(217, 19%, 35%);
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+}
+.article .content .article-footer .share-content span {
+  font-size: 0.8rem;
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.article .content .article-footer .share-content .socials {
+  display: flex;
+  gap: 1rem;
+}
+.article .content .article-footer .share-content .socials .social-btn {
+  transition: 0.2s ease;
+}
+.article .content .article-footer .share-content .socials .social-btn:hover {
+  transform: scale(1.25);
+}
+
+@media (max-width: 740px) {
+  .article {
+    margin: 4.64rem 0;
+    flex-direction: column;
+  }
+  .article .sideimg {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.5rem 0.5rem 0 0;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .article .content {
+    padding: 2.28rem 2rem 1.2rem;
+  }
+  .article .content h1 {
+    line-height: 1.45;
+  }
+  .article .content .article-footer {
+    margin-top: 2.05rem;
+  }
+  .article .content .article-footer .share-content {
+    width: 100%;
+    height: 78px;
+    padding: 0 2rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    justify-content: left;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s ease;
+    bottom: auto;
+    right: 0;
+  }
+  .article .content .article-footer .share-content.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: auto;
+  }
+  .article .content .article-footer .share-content::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
