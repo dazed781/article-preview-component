@@ -12,8 +12,7 @@ $headerColor: hsl(217, 19%, 35%);
 $textColor: hsl(214, 17%, 51%);
 
 body {
-  width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: $mainBg;
   font-family: "Manrope", sans-serif;
   display: flex;
